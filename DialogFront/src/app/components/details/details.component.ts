@@ -9,6 +9,8 @@ import {FormsModule} from "@angular/forms";
 import {MatCheckbox} from "@angular/material/checkbox";
 import {MatTooltip} from "@angular/material/tooltip";
 import {MatIcon} from "@angular/material/icon";
+import {HeaderComponent} from "../header/header.component";
+import {CartService} from "../../services/cart.service";
 
 @Component({
   selector: 'app-details',
@@ -20,7 +22,8 @@ import {MatIcon} from "@angular/material/icon";
         MatLabel,
         MatCheckbox,
         MatTooltip,
-        MatIcon
+        MatIcon,
+        HeaderComponent
     ],
   templateUrl: './details.component.html',
   styleUrl: './details.component.css'
@@ -29,7 +32,7 @@ export class DetailsComponent {
 
     product: Product=new Product();
 
-    constructor(private link: LinkService, private http: HttpClient, private activatedRoute: ActivatedRoute) {
+    constructor(private link: LinkService, private http: HttpClient, private activatedRoute: ActivatedRoute, private cart: CartService) {
     }
 
     ngOnInit()
@@ -44,6 +47,7 @@ export class DetailsComponent {
 
     addProduct()
     {
+        this.cart.addProduct(this.product);
         console.log("product added");
     }
 }

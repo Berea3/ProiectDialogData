@@ -13,6 +13,7 @@ export class CartService {
     addProduct(product: Product)
     {
         this.products.push(product);
+        console.log(this.products);
     }
 
     getProducts()
