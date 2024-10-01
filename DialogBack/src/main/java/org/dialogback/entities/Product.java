@@ -24,6 +24,9 @@ public class Product {
 
     private Double weight;
 
+    public Product() {
+    }
+
     public Product(String brand, String model, int price, boolean inStock, Double weight) {
         this.brand = brand;
         this.model = model;

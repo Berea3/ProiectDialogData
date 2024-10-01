@@ -1,0 +1,1 @@
+INSERT INTO `Product` (`id`, `brand`, `cpu`, `details`, `gpu`, `in_stock`, `model`, `price`, `ram`, `weight`) VALUES ('vn8ne4fwe', 'HP', 'Ryzen 7 5800H', 'gaming laptop', 'RTX 3060', true , 'Victus 16enq84', 4800, '20', 2.8);

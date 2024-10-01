@@ -1,1 +1,59 @@
-<p>details works!</p>
+<div class="form">
+    <form>
+        <div>
+            <h3>Product Info</h3>
+
+            <div class="row">
+                <mat-form-field appearance="outline" class="section">
+                    <mat-label>Product ID</mat-label>
+                    <input matInput [(ngModel)]="product.id" name="id" [disabled]="true" readonly>
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="section">
+                    <mat-label>Brand</mat-label>
+                    <input matInput [(ngModel)]="product.brand" name="brand" readonly>
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="section">
+                    <mat-label>Model</mat-label>
+                    <input matInput [(ngModel)]="product.model" name="model" readonly>
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="section">
+                    <mat-label>Weight</mat-label>
+                    <input matInput [(ngModel)]="product.weight" name="weight" type="number" readonly>
+                </mat-form-field>
+            </div>
+
+            <div class="row">
+                <mat-form-field appearance="outline" class="section">
+                    <mat-label>CPU</mat-label>
+                    <input matInput [(ngModel)]="product.cpu" name="cpu" readonly>
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="section">
+                    <mat-label>GPU</mat-label>
+                    <input matInput [(ngModel)]="product.gpu" name="gpu" readonly>
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="section">
+                    <mat-label>RAM</mat-label>
+                    <input matInput [(ngModel)]="product.ram" name="ram" readonly>
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="section">
+                    <mat-label>Price</mat-label>
+                    <input matInput [(ngModel)]="product.price" name="price" type="number" readonly>
+                </mat-form-field>
+            </div>
+
+            <div class="row">
+                <mat-form-field appearance="outline" class="section">
+                    <mat-label>Details</mat-label>
+                    <textarea matInput [(ngModel)]="product.details" name="details" rows="5" class="textarea" readonly></textarea>
+                </mat-form-field>
+                <mat-checkbox [checked]="product.inStock" name="inStock" [disableRipple]="true"
+                              (click)="$event.preventDefault()">In Stock</mat-checkbox>
+            </div>
+        </div>
+        <div>
+            <span class="btn" matTooltip="add to cart" (click)="addProduct()">
+                <mat-icon>add_shopping_cart</mat-icon>
+            </span>
+        </div>
+    </form>
+</div>
