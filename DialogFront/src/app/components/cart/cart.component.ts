@@ -52,7 +52,6 @@ export class CartComponent {
         console.log(this.cart.getProducts());
         this.products=this.cart.getProducts();
         this.dataSource.data=this.products;
-        // console.log(this.products);
     }
 
     removeProduct(i: number)
