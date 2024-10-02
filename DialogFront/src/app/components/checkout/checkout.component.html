@@ -1,0 +1,31 @@
+<div class="form">
+    <form>
+        <div>
+            <h3>Checkout Info</h3>
+
+            <div class="row">
+                <mat-form-field appearance="outline" class="section">
+                    <mat-label>Name</mat-label>
+                    <input matInput [(ngModel)]="name" name="name">
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="section">
+                    <mat-label>Email</mat-label>
+                    <input matInput [(ngModel)]="email" name="email">
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="section">
+                    <mat-label>DeliveryPoint</mat-label>
+                    <input matInput [(ngModel)]="deliveryPoint" name="deliveryPoint">
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="section">
+                    <mat-label>Details</mat-label>
+                    <input matInput [(ngModel)]="comments" name="comments">
+                </mat-form-field>
+            </div>
+        </div>
+        <div>
+            <span class="btn" matTooltip="add to cart" (click)="onCheckout()">
+                <mat-icon>check_circle</mat-icon>
+            </span>
+        </div>
+    </form>
+</div>

@@ -7,4 +7,14 @@
         Cart
         <mat-icon>shopping_cart</mat-icon>
     </span>
+    <span class="btn" routerLink="/checkout">
+        Checkout
+        <mat-icon>shopping_cart_checkout</mat-icon>
+    </span>
+    <span class="btn" routerLink="/login" *ngIf="!loggedIn()">
+        <mat-icon *ngIf="!loggedIn()">login</mat-icon>
+    </span>
+    <span class="btn" routerLink="/add"  *ngIf="loggedIn()">
+        <mat-icon *ngIf="loggedIn()">add_circle</mat-icon>
+    </span>
 </div>
