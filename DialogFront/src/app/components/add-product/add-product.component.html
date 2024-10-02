@@ -1,0 +1,60 @@
+<!--<app-header></app-header>-->
+<div class="form">
+    <form>
+        <div>
+            <h3>Product Info</h3>
+
+            <div class="row">
+                <mat-form-field appearance="outline" class="section">
+                    <mat-label>Product ID</mat-label>
+                    <input matInput [(ngModel)]="product.id" name="id" [disabled]="true">
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="section">
+                    <mat-label>Brand</mat-label>
+                    <input matInput [(ngModel)]="product.brand" name="brand">
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="section">
+                    <mat-label>Model</mat-label>
+                    <input matInput [(ngModel)]="product.model" name="model">
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="section">
+                    <mat-label>Weight</mat-label>
+                    <input matInput [(ngModel)]="product.weight" name="weight" type="number">
+                </mat-form-field>
+            </div>
+
+            <div class="row">
+                <mat-form-field appearance="outline" class="section">
+                    <mat-label>CPU</mat-label>
+                    <input matInput [(ngModel)]="product.cpu" name="cpu">
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="section">
+                    <mat-label>GPU</mat-label>
+                    <input matInput [(ngModel)]="product.gpu" name="gpu">
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="section">
+                    <mat-label>RAM</mat-label>
+                    <input matInput [(ngModel)]="product.ram" name="ram">
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="section">
+                    <mat-label>Price</mat-label>
+                    <input matInput [(ngModel)]="product.price" name="price" type="number">
+                </mat-form-field>
+            </div>
+
+            <div class="row">
+                <mat-form-field appearance="outline" class="section">
+                    <mat-label>Details</mat-label>
+                    <textarea matInput [(ngModel)]="product.details" name="details" rows="5" class="textarea"></textarea>
+                </mat-form-field>
+                <mat-checkbox [checked]="product.inStock" name="inStock" [disableRipple]="true"
+                              (click)="$event.preventDefault()">In Stock</mat-checkbox>
+            </div>
+        </div>
+        <div>
+            <span class="btn" matTooltip="add to cart" (click)="addProduct()">
+                <mat-icon>add_circle</mat-icon>
+            </span>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,14 @@
+<div class="cont">
+    <form class="form">
+        <h1 class="title">Admin Login</h1>
+        <mat-form-field appearance="outline">
+            <mat-label>username</mat-label>
+            <input matInput [(ngModel)]="username" name="id">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>password</mat-label>
+            <input matInput [(ngModel)]="password" name="ide">
+        </mat-form-field>
+        <button mat-flat-button color="primary" (click)="onSubmit()">Log in</button>
+    </form>
+</div>
